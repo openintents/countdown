@@ -8,6 +8,7 @@
 	<string name="about_translators">Launchpad Contributions:
   Henk van der Velden https://launchpad.net/~henkvandervelden86
   Jaap-Willem Dooge https://launchpad.net/~japydooge
+  Maarten de Vries https://launchpad.net/~maarten-k-de-vries
   Mark van Kuijk https://launchpad.net/~markvankuyk
   OpenIntents devs https://launchpad.net/~openintents-devs
   Peli https://launchpad.net/~peli0101</string>
@@ -172,5 +173,5 @@
     </string-array>
     
     
-    <string name="no_permission">OI Countdown doesn\'t have the permission for this task.</string>
+    <string name="no_permission">OI Countdown heeft niet de juiste machtigingen voor deze taak</string>
 </resources>

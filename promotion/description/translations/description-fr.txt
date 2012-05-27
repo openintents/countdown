@@ -2,12 +2,12 @@
 OI Countdown
 
 # Promo text:
-Set multiple countdowns with OI Countdown.
+Créé plusieurs compte à rebours avec OI Countdown.
 
 # Description:
 
 
-OI Countdown is a helpful timer to increase your productivity and plan your day.  It allows you to set a variety of different actions to notify you at the end of a timer.  Fully customize all your timers, with no limit on how many you can have running or saved.  
+OI Countdown est une application de compte à rebours permettant d'accroître votre productivité et organiser votre journée. Elle vous permet de paramétrer une variété d'actions pour vous notifier à la fin d'un compte à rebours. Personnalisez complètement vos comptes à rebours, sans limite sur le nombre de compte à rebours lancés ou enregistrés. 
 
 Cette application est petite annonce gratuite et ne nécessite pas l'autorisation d'Internet. 
 
@@ -27,18 +27,18 @@ Vous pouvez contribuer à améliorer la traduction dans votre langue au Launchpa
 https://translations.launchpad.net/openintents/trunk
 
 caractéristiques: 
-* Set a countdown by choosing a duration or a date.
-* Be notified by vibration or any sound of your choice. 
-* Have an unlimited number of timers running at the same time. 
-* Save your countdowns and give them names to reuse at later times. 
-* Modify countdowns, even while they are still running
+* Paramétrez un compte à rebours en choisissant une durée ou une date.
+* Soyez notifié par une vibration ou n'importe quel son de votre choix.
+* Ayez un nombre illimité de compte à rebours lancé au même moment.
+* Sauvegardez vos compte à rebours et donnez-leur des noms pour les réutiliser plus tard.
+* Modifiez des compte à rebours, même s'ils sont encore en train de fonctionner
 
-Available extensions for "OI Countdown":  
-* Launch applications through Android shortcuts
-* Use OI About to show license information
+Greffons disponible pour "OI Countdown": 
+* Lancer des applications avec les raccourcis Android
+* Utilisez OI About pour montrer vos informations de licence
 
 Mots-clés: 
-* countdown, timer, alert
+* countdown, timer, alert, compte à rebours, alarme, alerte, minuteur
 * OI, OpenIntents, Open Intents
 
 Les versions internationales: 

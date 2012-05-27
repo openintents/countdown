@@ -175,5 +175,5 @@
     </string-array>
     
     
-    <string name="no_permission">OI Countdown doesn\'t have the permission for this task.</string>
+    <string name="no_permission">OI Countdown no tiene permiso para esta tarea.</string>
 </resources>

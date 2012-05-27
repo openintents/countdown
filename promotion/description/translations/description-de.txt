@@ -26,7 +26,7 @@ http://www.openintents.org
 Sie können uns mit der Verbesserung der Übersetzung in ihre Sprache auf Launchpad unterstützen: 
 https://translations.launchpad.net/openintents/trunk
 
-Eigentschaften: 
+Leistungsmerkmale: 
 * Sie können einen Countdown einrichten, indem Sie die Dauer oder ein Datum festlegen.
 * Sie können über das Ende eines Timers mit einen Sound ihrer Wahl oder mit Vibration informiert werden.
 * Zur gleichen Zeit können unbegrenzt viele Timer laufen.

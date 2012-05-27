@@ -6,11 +6,10 @@
     
 	<!-- Automatically filled in by Launchpad: -->
 	<string name="about_translators">Launchpad Contributions:
-  Diego Pierotto https://launchpad.net/~gringo
-  Peli https://launchpad.net/~peli0101</string>
+  Diego Pierotto https://launchpad.net/~gringo</string>
 	
     <!-- Short explanation of the application (max. 80 characters) -->
-	<string name="about_comments">Set multiple countdowns with OI Countdown.</string>
+	<string name="about_comments">Imposta conti alla rovescia multipli con OI Countdown.</string>
 	
 	<!-- ***************************
 	     Applicatio-specific strings
@@ -169,5 +168,5 @@
     </string-array>
     
     
-    <string name="no_permission">OI Countdown doesn\'t have the permission for this task.</string>
+    <string name="no_permission">OI Countdown non ha i permessi per questa attività.</string>
 </resources>

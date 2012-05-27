@@ -2,7 +2,7 @@
 OI Countdown
 
 # Promo text:
-Set multiple countdowns with OI Countdown.
+Imposta conti alla rovescia multipli con OI Countdown.
 
 # Description:
 

@@ -8,6 +8,7 @@
 	<string name="about_translators">Launchpad Contributions:
   Atharva Lath https://launchpad.net/~atharvalath96
   OpenIntents devs https://launchpad.net/~openintents-devs
+  Prateek Arora https://launchpad.net/~prateekandroid
   happynawani https://launchpad.net/~happynawani</string>
 	
     <!-- Short explanation of the application (max. 80 characters) -->
@@ -170,5 +171,5 @@
     </string-array>
     
     
-    <string name="no_permission">OI Countdown doesn\'t have the permission for this task.</string>
+    <string name="no_permission">OI उल्टी गिनती के पास इस कार्य के लिए अनुमति नहीं है।</string>
 </resources>
