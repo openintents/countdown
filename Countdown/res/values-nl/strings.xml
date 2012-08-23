@@ -11,7 +11,8 @@
   Maarten de Vries https://launchpad.net/~maarten-k-de-vries
   Mark van Kuijk https://launchpad.net/~markvankuyk
   OpenIntents devs https://launchpad.net/~openintents-devs
-  Peli https://launchpad.net/~peli0101</string>
+  Peli https://launchpad.net/~peli0101
+  pjv https://launchpad.net/~pjv</string>
 	
     <!-- Short explanation of the application (max. 80 characters) -->
 	<string name="about_comments">Stel meerdere timers in met OI Countdown</string>
