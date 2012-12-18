@@ -16,6 +16,7 @@
 
 package org.openintents.countdown;
 
+import org.openintents.countdown.db.Countdown.Durations;
 import org.openintents.util.IntentUtils;
 
 import android.content.Context;
@@ -29,6 +30,7 @@ public class PreferenceActivity extends android.preference.PreferenceActivity {
 
 	public static final String PREFS_NOTIFICATION_TIMEOUT = "notification_timeout";
 	public static final String PREFS_NOTIFICATION_TIMEOUT_DEFAULT = "300";
+	public static final String PREFS_SORT_ORDER = "sort_order";
 	public static final String PREFS_EXTENSIONS_MARKET = "preference_extensions_market";
 
 	@Override
@@ -69,5 +71,9 @@ public class PreferenceActivity extends android.preference.PreferenceActivity {
 			// field. We'll use the default value then.
 		}
 		return notificationTimeout;
+	}
+
+	static public String getSortOrderFromPrefs(Context context){
+		return PreferenceManager.getDefaultSharedPreferences(context).getString(PREFS_SORT_ORDER, Durations.DEFAULT_SORT_ORDER);
 	}
 }

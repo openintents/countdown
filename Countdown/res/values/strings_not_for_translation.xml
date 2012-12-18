@@ -59,5 +59,10 @@
         <item>300</item>
         <item>600</item>
     </string-array>
+    <string-array name="preference_sortorder_entryvalues">
+        <item >created asc</item>
+        <item >modified desc</item>
+        <item >title asc</item>
+    </string-array>
     
 </resources>
