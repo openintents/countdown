@@ -39,6 +39,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.preference.PreferenceManager;
+import android.preference.PreferenceScreen;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -142,7 +144,8 @@ public class CountdownListActivity extends DistributionLibraryListActivity
         // Perform a managed query. The Activity will handle closing and requerying the cursor
         // when needed.
         mCursor = managedQuery(getIntent().getData(), PROJECTION, null, null,
-                Durations.DEFAULT_SORT_ORDER);
+                PreferenceActivity.getSortOrderFromPrefs(this)
+                );
         
         if (mCursor.getCount() == 0) {
         	// Create a new timer immediately

@@ -167,5 +167,13 @@
     </string-array>
     
     
+    <string-array name="preference_sortorder_entries">
+        <item >Creation</item>
+        <item >Modification</item>
+        <item >Title</item>
+    </string-array>
+    <string name="sort_by">Sort by</string>
+    <string name="sort_order_summary">Takes effect after restart</string>
     <string name="no_permission">OI Countdown doesn\'t have the permission for this task.</string>
+
 </resources>
