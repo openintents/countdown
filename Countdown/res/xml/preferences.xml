@@ -29,6 +29,7 @@
                 android:entries="@array/preference_notification_timeout_entries"
                 android:entryValues="@array/preference_notification_timeout_entryvalues"
                 android:dialogTitle="@string/preference_notification_timeout_dialog_title" />
+        <ListPreference android:entries="@array/preference_sortorder_entries" android:dialogTitle="@string/sort_by" android:entryValues="@array/preference_sortorder_entryvalues" android:title="@string/sort_by" android:key="sort_order" android:summary="@string/sort_order_summary" android:defaultValue="modified desc"/>
                 
     </PreferenceCategory>
     
