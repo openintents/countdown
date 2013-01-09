@@ -48,7 +48,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.ContentObserver;
@@ -73,7 +72,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 /**
  * A generic activity for editing a note in a database.  This can be used
@@ -133,6 +131,7 @@ public class CountdownEditorActivity extends Activity {
     private Button mModify;
     private Button mCont;
     private Button mDismiss;
+    private Button mPauseResume;
     private TextView mCountdownView;
     
     private LinearLayout mDateSetter;
@@ -307,6 +306,17 @@ public class CountdownEditorActivity extends Activity {
 			}
         	
         });
+        
+        mPauseResume=(Button)findViewById(R.id.pauseresume);
+        mPauseResume.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				pauseResume();
+			}
+		});
+        
         
         mStop = (Button) findViewById(R.id.stop);
         mStop.setOnClickListener(new View.OnClickListener() {
@@ -725,17 +735,19 @@ public class CountdownEditorActivity extends Activity {
         // Build the menus that are shown when editing.
         if (mState == STATE_EDIT) {
             menu.add(0, MENU_DELETE, 0, R.string.menu_delete)
+                    .setShortcut('3', 'd')
                     .setIcon(android.R.drawable.ic_menu_delete);
         
 
         // Build the menus that are shown when inserting.
         } else {
             menu.add(0, MENU_DELETE, 0, R.string.menu_delete)
+                    .setShortcut('3', 'd')
                     .setIcon(android.R.drawable.ic_menu_delete);
         }
 
 		menu.add(0, MENU_SETTINGS, 0, R.string.settings).setIcon(
-				android.R.drawable.ic_menu_preferences).setShortcut('9', 'p');
+				android.R.drawable.ic_menu_preferences).setShortcut('9', 's');
 		
         // If we are working on a full note, then append to the
         // menu items for any other activities that can do stuff with it
@@ -843,6 +855,31 @@ public class CountdownEditorActivity extends Activity {
             getContentResolver().delete(mUri, null, null);
             mText.setText("");
         }
+    }
+    
+    private final void pauseResume(){
+ 	mCountdownState = STATE_COUNTDOWN_MODIFY;
+		
+    	// Set current time to modify timer temporarily
+    	long now = System.currentTimeMillis();
+        
+    	//if (mCountdownMode == MODE_SET_DURATION) {
+	    	long temporaryDuration = mDeadline - now;
+	    	
+	    	if (temporaryDuration < 0) {
+	    		temporaryDuration = 0;
+	    	}
+	    	
+	    	
+	    	mDurationPicker.setDuration(temporaryDuration);
+    	//} else {
+    		// nothing to change for 
+    	//}
+    	
+    	mOriginalDuration = mDuration;
+    	mOriginalUserDeadline = mUserDeadline;
+    	
+    	updateViews();
     }
     
     private final void start() {
@@ -1041,14 +1078,7 @@ public class CountdownEditorActivity extends Activity {
 					// start Test
 					Intent i = new Intent(cleanIntent);
 					AutomationUtils.clearInternalExtras(i);
-					ActivityInfo info = i.resolveActivityInfo(getPackageManager(), 0);
-					String permission = info.permission;
-					if(permission == null || checkCallingPermission(permission) ==
-							PackageManager.PERMISSION_GRANTED){
-						startActivity(i);
-					} else{
-						Toast.makeText(this, R.string.no_permission, Toast.LENGTH_LONG).show();
-					}
+					startActivity(i);
 				}
 			} catch (ActivityNotFoundException e) {
 				// TODO
@@ -1198,6 +1228,7 @@ public class CountdownEditorActivity extends Activity {
 		mModify.setVisibility(View.GONE);
 		mCont.setVisibility(View.GONE);
 		mDismiss.setVisibility(View.GONE);
+		mPauseResume.setVisibility(View.GONE);
     	switch (mCountdownState) {
     	case STATE_COUNTDOWN_IDLE:
     		mStart.setVisibility(View.VISIBLE);
@@ -1205,6 +1236,7 @@ public class CountdownEditorActivity extends Activity {
     	case STATE_COUNTDOWN_RUNNING:
     		mStop.setVisibility(View.VISIBLE);
     		mModify.setVisibility(View.VISIBLE);
+    		mPauseResume.setVisibility(View.VISIBLE);
     		break;
     	case STATE_COUNTDOWN_MODIFY:
     		mCont.setVisibility(View.VISIBLE);
