@@ -50,7 +50,7 @@ public class DurationPicker extends FrameLayout {
     private int mCurrentSecond = 0; // 0-59
 
     // ui components
-    private final Button mShowDay;
+  //  private final Button mShowDay;
     private final NumberPicker mDayPicker;
     private final NumberPicker mHourPicker;
     private final NumberPicker mMinutePicker;
@@ -90,15 +90,7 @@ public class DurationPicker extends FrameLayout {
             this, // we are the parent
             true);
 
-        mShowDay = (Button) findViewById(R.id.showday);
-        mShowDay.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				showDayPicker();
-			}
-        	
-        });
+ 
         
         // day
         mDayPicker = (NumberPicker) findViewById(R.id.day);
@@ -157,10 +149,7 @@ public class DurationPicker extends FrameLayout {
         }
     }
     
-    public void showDayPicker() {
-    	mShowDay.setVisibility(View.GONE);
-    	mDayPicker.setVisibility(View.VISIBLE);
-    }
+
     
     @Override
     public void setEnabled(boolean enabled) {
@@ -329,9 +318,7 @@ public class DurationPicker extends FrameLayout {
     private void updateDayDisplay() {
         int currentDay = mCurrentDay;
         mDayPicker.setCurrent(currentDay);
-        if (mCurrentDay > 0 && mDayPicker.getVisibility() == View.GONE) {
-        	showDayPicker();
-        }
+ 
         onDurationChanged();
     }
     
